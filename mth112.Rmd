@@ -3,9 +3,10 @@ title: "Project4"
 author: "Lala Rukh"
 date: '2022-04-20'
 output:
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
+always_allow_html: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +15,7 @@ library(DiagrammeR)
 ```
 
 ```{r}
-grViz(diagram = "digraph flowchart {
+Plot_1 <- grViz(diagram = "digraph flowchart {
       # define node aesthetics
       node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
       tab1 [label = '@@1']
@@ -104,5 +105,7 @@ grViz(diagram = "digraph flowchart {
       [28]: 'Try one of the following'
       
 ")
+
+Plot_1
 ```
 
