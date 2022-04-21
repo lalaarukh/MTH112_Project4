@@ -1610,13 +1610,6 @@ pre code {
       tab19 [label = &#39;@@19&#39;]
       tab20 [label = &#39;@@20&#39;]
       tab21 [label = &#39;@@21&#39;]
-      tab22 [label = &#39;@@22&#39;]
-      tab23 [label = &#39;@@23&#39;]
-      tab24 [label = &#39;@@24&#39;]
-      tab25 [label = &#39;@@25&#39;]
-      tab26 [label = &#39;@@26&#39;]
-      tab27 [label = &#39;@@27&#39;]
-      tab28 [label = &#39;@@28&#39;]
 # set up node layout
       tab1 -&gt; tab2;
       tab2 -&gt; tab3;
@@ -1637,14 +1630,7 @@ pre code {
       tab17 -&gt; tab18;
       tab16 -&gt; tab19;
       tab19 -&gt; tab20;
-      tab14 -&gt; tab21;
-      tab21 -&gt; tab 22;
-      tab22 -&gt; tab23;
-      tab23 -&gt; tab24;
-      tab24 -&gt; tab25;
-      tab25 -&gt; tab26;
-      tab22 -&gt; tab27; 
-      tab27 -&gt; tab28
+      tab14 -&gt; tab21
       }
 [1]: &#39;Convergence Test&#39;
       [2]: &#39;Test for Divergence (lim n-infinity=0?)&#39;
@@ -1666,17 +1652,45 @@ pre code {
       [18]: &#39;sum^inf_n=1 an = a/(1-r)&#39;
       [19]: &#39;No&#39;
       [20]: &#39;sum an diverges&#39; 
-      [21]: &#39;No&#39;
-      [22]: &#39;Alt Srs Test: an=(-1)^n b_n or an=(-1)^(n-1)b_n, b_n,0?&#39;
-      [23]: &#39;Yes&#39;
-      [24]: &#39;is b_(n+1) less than greater to bn and lim as n approaches infinity bn =0&#39;
-      [25]: &#39;Yes&#39;
-      [26]: &#39;sum an converges&#39; 
-      [27]: &#39;No&#39;
-      [28]: &#39;Try one of the following&#39;
+      [21]: &#39;Try Alternating Series Test&#39;
       
-&quot;)</code></pre>
+&quot;)
+
+Plot_1</code></pre>
+<div id="htmlwidget-aa2e960c8c149460fd51" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aa2e960c8c149460fd51">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"Convergence Test\"]\n      tab2 [label = \"Test for Divergence (lim n-infinity=0?)\"]\n      tab3 [label = \"No\"]\n      tab4 [label = \"sum an diverges\"]\n      tab5 [label = \"Yes\"]\n      tab6 [label = \"P-series: Does an= 1/n^p, n greater than equal to 1?\"]\n      tab7 [label = \"Yes\"]\n      tab8 [label = \"Is p greater than 1?\"]\n      tab9 [label = \"Yes\"]\n      tab10 [label = \"sum an converges\"]\n      tab11 [label = \"No\"]\n      tab12 [label = \"sum an diverges\"]\n      tab13 [label = \"No\"]\n      tab14 [label = \"Geometric Series: Does an = a^(r-1), n greater than equal to 1\"]\n      tab15 [label = \"Yes\"]\n      tab16 [label = \"Is abs(r) less than 1?\"]\n      tab17 [label = \"Yes\"]\n      tab18 [label = \"sum^inf_n=1 an = a/(1-r)\"]\n      tab19 [label = \"No\"]\n      tab20 [label = \"sum an diverges\"]\n      tab21 [label = \"Try Alternating Series Test\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab2 -> tab5;\n      tab5 -> tab6;\n      tab6 -> tab7;\n      tab7 -> tab8; \n      tab8 -> tab9;\n      tab9 -> tab10;\n      tab8 -> tab11;\n      tab11 -> tab12;\n      tab6 -> tab13;\n      tab13 -> tab14;\n      tab14 -> tab15; \n      tab15 -> tab16;\n      tab16 -> tab17;\n      tab17 -> tab18;\n      tab16 -> tab19;\n      tab19 -> tab20;\n      tab14 -> tab21\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <pre class="r"><code>Plot_2 &lt;- grViz(diagram = &quot;digraph flowchart {
+      # define node aesthetics
+      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
+      tab1 [label = &#39;@@1&#39;]
+      tab2 [label = &#39;@@2&#39;]
+      tab3 [label = &#39;@@3&#39;]
+      tab4 [label = &#39;@@4&#39;]
+      tab5 [label = &#39;@@5&#39;]
+      tab6 [label = &#39;@@6&#39;]
+      tab7 [label = &#39;@@7&#39;]
+# set up node layout
+      tab1 -&gt; tab2;
+      tab2 -&gt; tab3;
+      tab3 -&gt; tab4;
+      tab4 -&gt; tab5;
+      tab1 -&gt; tab6; 
+      tab6 -&gt; tab7
+}
+      [1]: &#39;Alternating Series Test: an=(-1)^n b_n or an=(-1)^(n-1)b_n, b_n,0?&#39;
+      [2]: &#39;Yes&#39;
+      [3]: &#39;is b_(n+1) less than greater to bn and lim as n approaches infinity bn =0&#39;
+      [4]: &#39;Yes&#39;
+      [5]: &#39;sum an converges&#39; 
+      [6]: &#39;No&#39;
+      [7]: &#39;Try one of the following&#39;
+      
+&quot;)
+
+Plot_2</code></pre>
+<div id="htmlwidget-56581b5135b3eb3c84f9" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-56581b5135b3eb3c84f9">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"Alternating Series Test: an=(-1)^n b_n or an=(-1)^(n-1)b_n, b_n,0?\"]\n      tab2 [label = \"Yes\"]\n      tab3 [label = \"is b_(n+1) less than greater to bn and lim as n approaches infinity bn =0\"]\n      tab4 [label = \"Yes\"]\n      tab5 [label = \"sum an converges\"]\n      tab6 [label = \"No\"]\n      tab7 [label = \"Try one of the following\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab4 -> tab5;\n      tab1 -> tab6; \n      tab6 -> tab7\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>Plot_3 &lt;- grViz(diagram = &quot;digraph flowchart {
       # define node aesthetics
       node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
       tab1 [label = &#39;@@1&#39;]
@@ -1698,7 +1712,7 @@ pre code {
       tab7 -&gt; tab8;
       tab8 -&gt; tab9
       }
-[1]: &#39;Comparision Test: Pick b_n. Does sum b_n converge?&#39;
+[1]: &#39;1. Comparision Test: Pick b_n. Does sum b_n converge?&#39;
       [2]: &#39;Yes&#39;
       [3]: &#39;Is 0 greater than equal to a_n greater than equal to b_n&#39;
       [4]: &#39;Yes&#39;
@@ -1708,38 +1722,9 @@ pre code {
       [8]: &#39;Yes&#39;
       [9]: &#39;a_n diverges&#39;
       &quot;)
-Plot_2</code></pre>
-<div id="htmlwidget-55fd7b2647399d6ef44c" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-55fd7b2647399d6ef44c">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"Comparision Test: Pick b_n. Does sum b_n converge?\"]\n      tab2 [label = \"Yes\"]\n      tab3 [label = \"Is 0 greater than equal to a_n greater than equal to b_n\"]\n      tab4 [label = \"Yes\"]\n      tab5 [label = \"a_n converges\"]\n      tab6 [label = \"No\"]\n      tab7 [label = \"Is 0 greater than equal to b_n greater than equal to a_n\"]\n      tab8 [label = \"Yes\"]\n      tab9 [label = \"a_n diverges\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab4 -> tab5;\n      tab1 -> tab6;\n      tab6 -> tab7;\n      tab7 -> tab8;\n      tab8 -> tab9\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code>Plot_3 &lt;- grViz(diagram = &quot;digraph flowchart {
-      # define node aesthetics
-      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
-      tab1 [label = &#39;@@1&#39;]
-      tab2 [label = &#39;@@2&#39;]
-      tab3 [label = &#39;@@3&#39;]
-      tab4 [label = &#39;@@4&#39;]
-      tab5 [label = &#39;@@5&#39;]
-      tab6 [label = &#39;@@6&#39;]
-      tab7 [label = &#39;@@7&#39;]
-# set up node layout
-      tab1 -&gt; tab2;
-      tab2 -&gt; tab3;
-      tab3 -&gt; tab4;
-      tab4 -&gt; tab5;
-      tab3 -&gt; tab6;
-      tab6 -&gt; tab7
-      }
-[1]: &#39;Limit Comparision Test: Pick b_n. Does lim n to inf a_n/b_n = c &gt;0 where a_n, b_n &gt;0&#39;
-      [2]: &#39;Yes&#39;
-      [3]: &#39;Sum inf n=1 b_n converges?&#39;
-      [4]: &#39;Yes&#39;
-      [5]: &#39;sum a_n converges&#39;
-      [6]: &#39;No&#39;
-      [7]: &#39;Sum a_n diverges&#39;
-      &quot;)
 Plot_3</code></pre>
-<div id="htmlwidget-06efd6c520816ffc42ff" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-06efd6c520816ffc42ff">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"Limit Comparision Test: Pick b_n. Does lim n to inf a_n/b_n = c >0 where a_n, b_n >0\"]\n      tab2 [label = \"Yes\"]\n      tab3 [label = \"Sum inf n=1 b_n converges?\"]\n      tab4 [label = \"Yes\"]\n      tab5 [label = \"sum a_n converges\"]\n      tab6 [label = \"No\"]\n      tab7 [label = \"Sum a_n diverges\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab4 -> tab5;\n      tab3 -> tab6;\n      tab6 -> tab7\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-23fbccc0051427c174a4" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-23fbccc0051427c174a4">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"1. Comparision Test: Pick b_n. Does sum b_n converge?\"]\n      tab2 [label = \"Yes\"]\n      tab3 [label = \"Is 0 greater than equal to a_n greater than equal to b_n\"]\n      tab4 [label = \"Yes\"]\n      tab5 [label = \"a_n converges\"]\n      tab6 [label = \"No\"]\n      tab7 [label = \"Is 0 greater than equal to b_n greater than equal to a_n\"]\n      tab8 [label = \"Yes\"]\n      tab9 [label = \"a_n diverges\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab4 -> tab5;\n      tab1 -> tab6;\n      tab6 -> tab7;\n      tab7 -> tab8;\n      tab8 -> tab9\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <pre class="r"><code>Plot_4 &lt;- grViz(diagram = &quot;digraph flowchart {
       # define node aesthetics
       node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
@@ -1758,7 +1743,36 @@ Plot_3</code></pre>
       tab3 -&gt; tab6;
       tab6 -&gt; tab7
       }
-[1]: &#39;Integral Test: Does a_n=f(x)? Is f(x) continuous, positive and decreasing on (a,inf)&#39;
+[1]: &#39;2. Limit Comparision Test: Pick b_n. Does lim n to inf a_n/b_n = c &gt;0 where a_n, b_n &gt;0&#39;
+      [2]: &#39;Yes&#39;
+      [3]: &#39;Sum inf n=1 b_n converges?&#39;
+      [4]: &#39;Yes&#39;
+      [5]: &#39;sum a_n converges&#39;
+      [6]: &#39;No&#39;
+      [7]: &#39;Sum a_n diverges&#39;
+      &quot;)
+Plot_4</code></pre>
+<div id="htmlwidget-8e5475c4b67975888c0b" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8e5475c4b67975888c0b">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"2. Limit Comparision Test: Pick b_n. Does lim n to inf a_n/b_n = c >0 where a_n, b_n >0\"]\n      tab2 [label = \"Yes\"]\n      tab3 [label = \"Sum inf n=1 b_n converges?\"]\n      tab4 [label = \"Yes\"]\n      tab5 [label = \"sum a_n converges\"]\n      tab6 [label = \"No\"]\n      tab7 [label = \"Sum a_n diverges\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab4 -> tab5;\n      tab3 -> tab6;\n      tab6 -> tab7\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>Plot_5 &lt;- grViz(diagram = &quot;digraph flowchart {
+      # define node aesthetics
+      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
+      tab1 [label = &#39;@@1&#39;]
+      tab2 [label = &#39;@@2&#39;]
+      tab3 [label = &#39;@@3&#39;]
+      tab4 [label = &#39;@@4&#39;]
+      tab5 [label = &#39;@@5&#39;]
+      tab6 [label = &#39;@@6&#39;]
+      tab7 [label = &#39;@@7&#39;]
+# set up node layout
+      tab1 -&gt; tab2;
+      tab2 -&gt; tab3;
+      tab3 -&gt; tab4;
+      tab4 -&gt; tab5;
+      tab3 -&gt; tab6;
+      tab6 -&gt; tab7
+      }
+[1]: &#39;3. Integral Test: Does a_n=f(x)? Is f(x) continuous, positive and decreasing on (a,inf)&#39;
       [2]: &#39;Yes&#39;
       [3]: &#39;Does integral a to inf converge&#39;
       [4]: &#39;Yes&#39;
@@ -1766,9 +1780,38 @@ Plot_3</code></pre>
       [6]: &#39;No&#39;
       [7]: &#39;a_n diverges&#39;
       &quot;)
-Plot_4</code></pre>
-<div id="htmlwidget-54d23e9b6b0dc5fb521e" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-54d23e9b6b0dc5fb521e">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"Integral Test: Does a_n=f(x)? Is f(x) continuous, positive and decreasing on (a,inf)\"]\n      tab2 [label = \"Yes\"]\n      tab3 [label = \"Does integral a to inf converge\"]\n      tab4 [label = \"Yes\"]\n      tab5 [label = \"a_n converges\"]\n      tab6 [label = \"No\"]\n      tab7 [label = \"a_n diverges\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab4 -> tab5;\n      tab3 -> tab6;\n      tab6 -> tab7\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+Plot_5</code></pre>
+<div id="htmlwidget-f3b50706b0def36988c7" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f3b50706b0def36988c7">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"3. Integral Test: Does a_n=f(x)? Is f(x) continuous, positive and decreasing on (a,inf)\"]\n      tab2 [label = \"Yes\"]\n      tab3 [label = \"Does integral a to inf converge\"]\n      tab4 [label = \"Yes\"]\n      tab5 [label = \"a_n converges\"]\n      tab6 [label = \"No\"]\n      tab7 [label = \"a_n diverges\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab4 -> tab5;\n      tab3 -> tab6;\n      tab6 -> tab7\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>Plot_6 &lt;-  grViz(diagram = &quot;digraph flowchart {
+      # define node aesthetics
+      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
+      tab1 [label = &#39;@@1&#39;]
+      tab2 [label = &#39;@@2&#39;]
+      tab3 [label = &#39;@@3&#39;]
+      tab4 [label = &#39;@@4&#39;]
+      tab5 [label = &#39;@@5&#39;]
+      tab6 [label = &#39;@@6&#39;]
+      tab7 [label = &#39;@@7&#39;]
+# set up node layout
+      tab1 -&gt; tab2;
+      tab2 -&gt; tab3;
+      tab3 -&gt; tab4;
+      tab4 -&gt; tab5;
+      tab3 -&gt; tab6;
+      tab6 -&gt; tab7
+      }
+[1]: &#39;4. Ratio Test: Is lim n to inf abs a_n + 1 / abs a_n not equal to 1&#39;
+      [2]: &#39;Yes&#39;
+      [3]: &#39;Is lim n to inf abs a_n + 1 / abs a_n &lt; 1?&#39;
+      [4]: &#39;Yes&#39;
+      [5]: &#39;sum a_n absolutely converges&#39;
+      [6]: &#39;No&#39;
+      [7]: &#39;Sum a_n diverges&#39;
+      &quot;)
+Plot_6</code></pre>
+<div id="htmlwidget-391d0b4c91d0de5e9403" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-391d0b4c91d0de5e9403">{"x":{"diagram":"digraph flowchart {\n      # define node aesthetics\n      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        \n      tab1 [label = \"4. Ratio Test: Is lim n to inf abs a_n + 1 / abs a_n not equal to 1\"]\n      tab2 [label = \"Yes\"]\n      tab3 [label = \"Is lim n to inf abs a_n + 1 / abs a_n < 1?\"]\n      tab4 [label = \"Yes\"]\n      tab5 [label = \"sum a_n absolutely converges\"]\n      tab6 [label = \"No\"]\n      tab7 [label = \"Sum a_n diverges\"]\n# set up node layout\n      tab1 -> tab2;\n      tab2 -> tab3;\n      tab3 -> tab4;\n      tab4 -> tab5;\n      tab3 -> tab6;\n      tab6 -> tab7\n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 
 
