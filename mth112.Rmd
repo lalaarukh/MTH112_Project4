@@ -2,11 +2,7 @@
 title: "Project4"
 author: "Lala Rukh"
 date: '2022-04-20'
-output:
-  pdf_document: default
-  html_document:
-    df_print: paged
-always_allow_html: yes
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -15,7 +11,7 @@ library(DiagrammeR)
 ```
 
 ```{r}
-Plot_1 <- grViz(diagram = "digraph flowchart {
+ Plot_1 <- grViz(diagram = "digraph flowchart {
       # define node aesthetics
       node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
       tab1 [label = '@@1']
@@ -106,6 +102,102 @@ Plot_1 <- grViz(diagram = "digraph flowchart {
       
 ")
 
-Plot_1
+
+
+```
+
+```{r}
+Plot_2 <- grViz(diagram = "digraph flowchart {
+      # define node aesthetics
+      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
+      tab1 [label = '@@1']
+      tab2 [label = '@@2']
+      tab3 [label = '@@3']
+      tab4 [label = '@@4']
+      tab5 [label = '@@5']
+      tab6 [label = '@@6']
+      tab7 [label = '@@7']
+      tab8 [label = '@@8']
+      tab9 [label = '@@9']
+# set up node layout
+      tab1 -> tab2;
+      tab2 -> tab3;
+      tab3 -> tab4;
+      tab4 -> tab5;
+      tab1 -> tab6;
+      tab6 -> tab7;
+      tab7 -> tab8;
+      tab8 -> tab9
+      }
+[1]: 'Comparision Test: Pick b_n. Does sum b_n converge?'
+      [2]: 'Yes'
+      [3]: 'Is 0 greater than equal to a_n greater than equal to b_n'
+      [4]: 'Yes'
+      [5]: 'a_n converges'
+      [6]: 'No'
+      [7]: 'Is 0 greater than equal to b_n greater than equal to a_n'
+      [8]: 'Yes'
+      [9]: 'a_n diverges'
+      ")
+Plot_2
+```
+```{r}
+Plot_3 <- grViz(diagram = "digraph flowchart {
+      # define node aesthetics
+      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
+      tab1 [label = '@@1']
+      tab2 [label = '@@2']
+      tab3 [label = '@@3']
+      tab4 [label = '@@4']
+      tab5 [label = '@@5']
+      tab6 [label = '@@6']
+      tab7 [label = '@@7']
+# set up node layout
+      tab1 -> tab2;
+      tab2 -> tab3;
+      tab3 -> tab4;
+      tab4 -> tab5;
+      tab3 -> tab6;
+      tab6 -> tab7
+      }
+[1]: 'Limit Comparision Test: Pick b_n. Does lim n to inf a_n/b_n = c >0 where a_n, b_n >0'
+      [2]: 'Yes'
+      [3]: 'Sum inf n=1 b_n converges?'
+      [4]: 'Yes'
+      [5]: 'sum a_n converges'
+      [6]: 'No'
+      [7]: 'Sum a_n diverges'
+      ")
+Plot_3
+```
+
+```{r}
+Plot_4 <- grViz(diagram = "digraph flowchart {
+      # define node aesthetics
+      node [fontname = Arial, shape = oval, color = Lavender, style = filled]        
+      tab1 [label = '@@1']
+      tab2 [label = '@@2']
+      tab3 [label = '@@3']
+      tab4 [label = '@@4']
+      tab5 [label = '@@5']
+      tab6 [label = '@@6']
+      tab7 [label = '@@7']
+# set up node layout
+      tab1 -> tab2;
+      tab2 -> tab3;
+      tab3 -> tab4;
+      tab4 -> tab5;
+      tab3 -> tab6;
+      tab6 -> tab7
+      }
+[1]: 'Integral Test: Does a_n=f(x)? Is f(x) continuous, positive and decreasing on (a,inf)'
+      [2]: 'Yes'
+      [3]: 'Does integral a to inf converge'
+      [4]: 'Yes'
+      [5]: 'a_n converges'
+      [6]: 'No'
+      [7]: 'a_n diverges'
+      ")
+Plot_4
 ```
 
